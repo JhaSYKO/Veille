@@ -26,31 +26,7 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Hello!</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Acceuil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="post.html">Veille</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">à propos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Me contacter</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <?php include 'navigation.php' ?>
 
   <!-- Page Header -->
   <header class="masthead" style="background-image: url('img/contact-bg.jpg')">
@@ -66,40 +42,39 @@
       </div>
     </div>
   </header>
-
   <!-- Main Content -->
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
+        <p>Vous voulez me contacter? Remplissez le formulaire, je vous répondrais dans les plus brèf délais.</p>
         <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
         <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
         <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
         <form name="sentMessage" id="contactForm" novalidate>
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
-              <label>Name</label>
-              <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+              <label>Nom/Prénom</label>
+              <input type="text" class="form-control" placeholder="Nom/Prénom" id="name" required data-validation-required-message="Please enter your name.">
               <p class="help-block text-danger"></p>
             </div>
           </div>
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
-              <label>Email Address</label>
-              <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+              <label>Adresse Email</label>
+              <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Please enter your email address.">
               <p class="help-block text-danger"></p>
             </div>
           </div>
           <div class="control-group">
             <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label>Phone Number</label>
-              <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+              <label>Numéros de téléphone</label>
+              <input type="tel" class="form-control" placeholder="(87/89/88)/00/00/00" id="phone" required data-validation-required-message="Please enter your phone number.">
               <p class="help-block text-danger"></p>
             </div>
           </div>
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
-              <label>Message</label>
+              <label>Votre message</label>
               <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
               <p class="help-block text-danger"></p>
             </div>
@@ -116,33 +91,7 @@
 
   <hr>
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <ul class="list-inline text-center">
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/teraiapiti.tematahotoa">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://github.com/JhaSYKO">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
-          <p class="copyright text-muted">Copyright &copy; Veille_TT 2019/2020</p>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <?php include 'footer.php' ?>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
