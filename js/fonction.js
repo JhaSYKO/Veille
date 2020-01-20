@@ -9,7 +9,7 @@ $(document).ready(function createVeilleCard() {
         records.forEach(function (record) {
             $("#VeilleRetrieve").append(
                 "<div class='row text-center'>" +
-                    "<div class='card shadow m-2 text-center " + record.id + " list-item'>" +
+                    "<div class='card w-100 shadow m-2 text-center " + record.id + " list-item'>" +
                         "<div class='card-body'>" +
                             '<div class="headArticle row mt-5 text-center">'+
                                 '<div class="col">'+
