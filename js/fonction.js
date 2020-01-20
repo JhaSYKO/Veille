@@ -72,5 +72,28 @@ $(document).ready(function createVeilleCard() {
         });
 
         fetchNextPage();
+
+        paginationVeille()
     }, );
 });
+
+function paginationVeille() {
+
+    var itemsVeille = $(".list-wrapper-veille .list-item");
+    var numItemsVeille = itemsVeille.length;
+    var perPageVeille = 5;
+
+    itemsVeille.slice(perPageVeille).hide();
+
+    $('#pagination-container-veille').pagination({
+        items: numItemsVeille,
+        itemsOnPage: perPageVeille,
+        prevText: "&laquo;",
+        nextText: "&raquo;",
+        onPageClick: function (pageNumber) {
+            var showFrom = perPageVeille * (pageNumber - 1);
+            var showTo = showFrom + perPageVeille;
+            itemsVeille.hide().slice(showFrom, showTo).show();
+        }
+    });
+}
