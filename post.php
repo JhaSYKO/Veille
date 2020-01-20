@@ -47,13 +47,10 @@
   <!-- Post Content -->
   <article>
     <div id="VeilleRetrieve" class="container list-wrapper-veille"></div>
-    <div class="container">
+
     <div id="pagination-container-veille"></div>
-    </div>
     
   </article>
-
-  <hr>
 
   <!-- Footer -->
   <?php include 'footer.php' ?>

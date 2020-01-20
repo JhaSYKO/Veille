@@ -8,16 +8,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.php">Acceuil</a>
+            <a class="nav-link ml-2 mr-2" href="index.php">Acceuil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="post.php">Veille</a>
+            <a class="nav-link ml-2 mr-2" href="post.php">Veille</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.php">à propos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.php">Me contacter</a>
+            <a class="nav-link ml-2 mr-2" href="about.php">à propos</a>
           </li>
         </ul>
       </div>

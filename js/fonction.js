@@ -1,6 +1,6 @@
 $(document).ready(function createVeilleCard() {
 
-    localStorage.setItem('veille', 'connected');
+    resetDocument();
 
     base('Veille').select({
         maxRecords: 50,
@@ -45,7 +45,9 @@ $(document).ready(function createVeilleCard() {
                                             '<p><u>Lien vers la source :<a href="'+record.get("link")+'">  Clique-moi  </a></u></p>'+
                                             '</div>'+
                                         '</div>'+
-                                        "<div class='btn btn-success mt-5 returnVeille' onclick='createVeilleCard()'>Revenir</div>" +
+                                        '<form>'+
+                                        "<button class='btn btn-success mt-5 returnVeille' type='submit' >Revenir</button>" +
+                                        '</form>'+
                                     '</div>'+
                                 '</div>'+
                             "</div>"+
@@ -55,18 +57,20 @@ $(document).ready(function createVeilleCard() {
                 "<script>" +
                     "$('#" + record.id + "').click(function() {" +
                         "$('.card').hide();" +
+                        "$('#pagination-container-veille').hide();" +
                         "$('.headArticle').hide();" +
                         "$('." + record.id + ", .contentVeille').show();" +
-                        "base2('Veille').find('" + record.id + "', function(err, record) {"+
+                        "base('Veille').find('" + record.id + "', function(err, record) {"+
                            " if (err) { console.error(err); return; }"+
                             "console.log('Retrieved', record.id);"+
                        " });"+
                     "});" +
-                    "$('.returnVeille').click(function() {" +
-                        "$('.card').show();" +
-                        "$('.headArticle').show();" +
-                        "$('." + record.id + ", .contentVeille').hide();" +
-                    "});" +
+                    // "$('.returnVeille').click(function() {" +
+                    //     "$('.card').show();" +
+                    //     "$('#pagination-container-veille').show();" +
+                    //     "$('.headArticle').show();" +
+                    //     "$('." + record.id + ", .contentVeille').hide();" +
+                    // "});" +
                 "</script>"
             );
         });
@@ -96,4 +100,10 @@ function paginationVeille() {
             itemsVeille.hide().slice(showFrom, showTo).show();
         }
     });
+}
+
+function resetDocument() {
+    
+    $("#VeilleRetrieve").empty();
+
 }
